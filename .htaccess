@@ -1,7 +1,8 @@
 RewriteEngine On
+//any domain
 RewriteCond %{HTTP_HOST} !^www\. [NC]
 RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
 
 //specific domain
-RewriteCond %{HTTP_HOST} ^eflexiload.net$ [NC]
-RewriteRule (.*) http://www.eflexiload.net/$1 [R=301,L] 
+RewriteCond %{HTTP_HOST} ^example.com$ [NC]
+RewriteRule (.*) http://www.example.com/$1 [R=301,L] 
